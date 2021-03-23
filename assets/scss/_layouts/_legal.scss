@@ -1,0 +1,29 @@
+.legal {
+
+  h1 {
+    color: $disco;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    +p,
+    +h3 {
+      margin-top: 3rem;
+    }
+  }
+}

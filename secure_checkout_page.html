@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ Buckley</title>
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="secure-checkout">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h1>Secure checkout</h1>
+                    <div class="steps">
+                        <div class="active">Step 1 address</div>
+                        <div>Step 2 shipping</div>
+                        <div>Step 3 payment</div>
+                    </div>
+                </div>
+                <p>Please fill in the information requested below to complete your purchase.</p>
+                <form action="frmCheckout">
+                    <div class="fields-1">
+                        <div class="grid two-across">
+                            <div>
+                                <h2>Shipping Address</h2>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-first_name" value="" class="form-control required" placeholder="First Name *" id="id_shipping_address-first_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-last_name" value="" class="form-control required" placeholder="Last Name *" id="id_shipping_address-last_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-company" value="" class="form-control" placeholder="Company or C/O" id="id_shipping_address-company">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-address-two" value="" class="form-control" placeholder="Address 2" id="id_shipping_address-address-two">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-city" value="" class="form-control required" placeholder="City *" id="id_shipping_address-city">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-state" class="form-control" placeholder="State *" id="id_shipping_address-state">
+                                </div>
+                                <div class="form-group">
+                                    <select name="" name="shipping_address-country" class="form-control required" id="id_shipping_address-country">
+                                        <option value="" selected>Select your Country *</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="shipping_address-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_shipping_address-postal_code">
+                                </div>
+                            </div>
+                            <div>
+                                <h2>Billing Address</h2>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-first_name" value="" class="form-control required" placeholder="First Name *" id="id_billing_address-first_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-last_name" value="" class="form-control required" placeholder="Last Name *" id="id_billing_address-last_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-address-two" value="" class="form-control" placeholder="Address 2" id="id_billing_address-address-two">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-city" value="" class="form-control required" placeholder="City *" id="id_billing_address-city">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-state" class="form-control" placeholder="State *" id="id_billing_address-state">
+                                </div>
+                                <div class="form-group">
+                                    <select name="" name="billing_address-country" class="form-control required" id="id_billing_address-country">
+                                        <option value="" selected>Select your Country *</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="billing_address-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_billing_address-postal_code">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid two-across">
+                            <div>
+                                <h2>Billing contact information</h2>
+                                <div class="form-group">
+                                    <input type="text" name="billing_contact-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_billing_contact-postal_code">
+                                </div>
+                            </div>
+                            <div>
+                                <button id="next">Continue to shipping</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fields-2">
+                        <div class="grid two-across">
+                            <div>
+                                <div>
+                                    <p>Select a shipping method</p>
+                                    <div class="form-group">
+                                        <select name="shipping_options-method" id="id_shipping_options-method">
+                                            <option value="" selected>Choose a shipping method</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>When would you like wines to ship</p>
+                                    <div class="form-group calendar">
+                                        <input type="text" name="shipping_options-date" value="2021-02-09" class="form-control" id="datepicker" data-date-format="yyyy-mm-dd">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#042262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Would you like to add shipping insurance?</p>
+                                    (checkbox) shipping_options
+                                </div>
+                                <div>
+                                    <p>Is this a gift?</p>
+                                    (checkbox)
+                                    <textarea name="shipping_options-gift" id="id_shipping_options-gift" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="next">Continue to  payment</button>
+                        </div>
+                    </div>
+                    <div class="fields-3">
+                        <div class="outer">
+                            <div class="d-flex">
+                                <div>
+                                    <h2>Your order</h2>
+                                    <table>
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div class="summary">
+                                        <p>Sub-total <span>$ 123.64</span></p>
+                                        <p>Sales tax <span>$ 00.00</span></p>
+                                        <p>Shipping (Fedex Ground) <span>$ 00.00</span></p>
+                                        <p>Insurance <span>$ 00.00</span></p>
+                                    </div>
+                                    <div>
+                                        <a href="">Have a gift certificate or promo code?</a>
+                                        <p>Total: <span>$ 000.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="shipping-summary">
+                                    <div>
+                                        <h3>Shipping Address</h3>
+                                        <a href="">Modify</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                        <p>12345</p>
+                                    </div>
+                                    <div>
+                                        <h3>Billing Address</h3>
+                                        <a href="">Modify</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                        <p>12345</p>
+                                    </div>
+                                    <div>
+                                        <h3>Shipping Options</h3>
+                                        <a href="">Modify</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                        <p>12345</p>
+                                    </div>
+                                    <p>Shipping Method: <span></span></p>
+                                    <p>Shipping Date: <span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div>
+                                <h3>Payment</h3>
+                                <p>Please select a payment method</p>
+                                <form action="">
+                                    (radiobox) Paypal image
+                                    (radiobox) visa mastercard image options
+                                </form>
+                            </div>
+                            <div>
+                                <p>Card Information</p>
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" name="card_info-name" id="id_card_info-name" placeholder="Name on the Card *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control required" name="card_info-number" id="id_card_info-number" placeholder="Card Number *">
+                                    </div>
+                                    <div>
+                                        <div class="form-group">
+                                            <select name="card_info-month" id="id_card_info-month">
+                                                <option value="" selected>Expiration Date *</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="card_info-month" id="id_card_info-month">
+                                                <option value="" selected>Year *</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit">complete checkout</button>
+                                    <p>By placing your order, you agree to JJ Buckley's <a href="">Terms &amp; Conditions</a> of sale</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="message-box">
+                            <p><strong>WARNING:</strong> Drinking distilled spirits, beer, coolers, wine and other alcoholic beverages may increase cancer risk, and, during pregnancy, can cause birth defects. For more information go to www.P65Warnings.ca.gov/alcohol.</p>
+                            <p><strong>WARNING:</strong> Consuming this product can expose you to bisphenol A (BPA), which is known to the State of California to cause birth defects or other reproductive harm. For more information go to www.P65Warnings.ca.gov/food.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {});
+</script>
+</html>

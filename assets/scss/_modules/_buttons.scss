@@ -1,0 +1,130 @@
+//////////////////////////////////////////////////////////
+// BASE DEFAULTS /////////////////////////////////////////
+//////////////////////////////////////////////////////////
+$prefix: '.m-btn';
+$btn-bgcolor: white !default;
+$btn-height: 4.4rem !default;
+$btn-line-height: 4.4rem !default;
+
+//////////////////////////////////////////////////////////
+// TYPOGRAPHY ////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+$btn-font-color: #FFF !default;
+$btn-font-size: 0.875rem !default;
+$btn-font-weight: 700;
+$btn-font-family: 'Open Sans', sans-serif;
+
+// (name background-color font-color) add as many as you like.
+$button-schemes: ('default' $disco $white) ('grey' #808080 $white);
+$button-borders: ('button-border-1' transparent #e8ded8 #e8ded8 #e8ded8 ) ('button-border-2' transparent blue blue white);
+
+$btn-types: 'flat' 'rounded' 'border' 'gradient';
+
+$btn-build-border: false;
+
+#{$prefix} {
+  display: inline-block;
+  background-color: $btn-bgcolor;
+  border-radius: 5px;
+  height: $btn-height;
+  line-height: $btn-height;
+  padding: 0px 1.7rem;
+  font-weight: $btn-font-weight;
+  font-size: 1.7rem;
+  font-family: $btn-font-family;
+  color:  $btn-font-color;
+  text-shadow: none;
+  text-transform: uppercase;
+  margin: 0;
+  min-width: 180px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover, &:focus, &:active, &.is-active, &.active {
+    text-decoration: none;
+  }
+
+  &:hover, &:focus {
+    color:  $btn-font-color;
+    background-color: darken($btn-bgcolor, 20%);
+  }
+  &:active, &.is-active, &.active {
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .4);
+    background: desaturate($btn-bgcolor, 20%);
+    color: darken($btn-bgcolor, 20%);
+    transition-duration: 0s;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+//HEIGHT NEEDED FOR FORM ELEMENTS
+input#{$prefix}, button#{$prefix} {
+  border: none;
+  height: $btn-height;
+  line-height: $btn-height;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+//////////////////////////////////////////////////////////
+// SCHEME STYLES /////////////////////////////////////////
+//////////////////////////////////////////////////////////
+@each $button-scheme in $button-schemes {
+  //GET NAME & COLOR
+  $btn-name: nth($button-scheme, 1);
+  $btn-background: nth($button-scheme, 2);
+  $btn-color: nth($button-scheme, 3);
+
+  // .button-jade etc.
+  #{$prefix}-#{$btn-name} {
+    background-color: $btn-background;
+    border-color: lighten($btn-background, 10%);
+    color: $btn-color;
+    text-shadow: none;
+
+    &:hover, &:focus {
+      background-color: lighten($btn-background, 5%);
+      color: $btn-color;
+    }
+    &:active, &.is-active, &.active {
+      background: desaturate($btn-background, 5%);
+      color: $btn-color;
+      transition-duration: 0s;
+    }
+  }
+}
+
+@each $button-border in $button-borders {
+  $btn-name: nth($button-border, 1);
+  $btn-background: nth($button-border, 2);
+  $btn-color: nth($button-border, 3);
+  $btn-hover-background: nth($button-border, 4);
+  $btn-hover-color: nth($button-border, 5);
+  
+  #{$prefix}-border-#{$btn-name} {
+    border: 1px solid $btn-color;
+    background-color: $btn-background;
+    border-radius: 5px;
+    color: $btn-color;
+    position: relative;
+    padding: 1px;
+    z-index: 2;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid $btn-color;
+      background-image: none;
+      background: $btn-hover-background;
+      color: $btn-hover-color;
+    }
+  }
+}
+
+button:focus {
+  outline: none;
+}
+

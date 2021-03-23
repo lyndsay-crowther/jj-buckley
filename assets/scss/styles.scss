@@ -1,0 +1,37 @@
+// Base
+@import "_base/_config",
+        "_base/_typography",
+        "_base/general";
+
+// Vendors
+@import "_vendors/_bootstrap/scss/custom-bootstrap", // NB: not all Bootstrap Modules are pulled in
+        "_vendors/_bootstrap-tables/bootstrap-table",
+        "_vendors/_magnific-popup/magnific-popup",
+        "_vendors/_owl-carousel/owl.carousel"; 
+
+// Layouts
+@import "_layouts/home",
+        "_layouts/products-overview",
+        "_layouts/product_detail",
+        "_layouts/leadership",
+        "_layouts/customer-reviews",
+        "_layouts/legal",
+        "_layouts/contact",
+        "_layouts/blog",
+        "_layouts/shopping-cart";
+
+// Modules
+@import "_modules/announcement-bar",
+        "_modules/header",
+        "_modules/buttons",
+        "_modules/navigation",
+        "_modules/masthead",
+        "_modules/cards",
+        "_modules/footer",
+        "_modules/carousel",
+        "_modules/accordion",
+        "_modules/forms",
+        "_modules/modals";
+
+
+

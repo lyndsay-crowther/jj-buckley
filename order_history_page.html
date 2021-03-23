@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ Buckley</title>
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="order-history">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex">
+                    <h1>Order History</h1>
+                    <form action="">
+                        <div class="form-group calendar">
+                            <input type="text" name="search_by-date" value="" class="form-control" id="datepicker" data-date-format="yyyy-mm-dd">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#042262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="search_by-number" id="id_search_by-number" class="form-control" placeholder="Search by number">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table data-toggle="table">
+                    <thead>
+                      <tr>
+                        <th data-sortable="true">ORDER DATE</th>
+                        <th data-sortable="true">ORDER NUMBER</th>
+                        <th data-sortable="true">ITEMS</th>
+                        <th data-sortable="true">TOTAL</th>
+                        <th data-sortable="true">PAYMENT</th>
+                        <th data-sortable="true">STATUS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 text-center">
+                <button>Load more</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/dist/scripts.js"></script>
+</html>

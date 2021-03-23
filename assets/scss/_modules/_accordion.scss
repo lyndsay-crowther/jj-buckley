@@ -1,0 +1,20 @@
+.accordion {
+
+  .card {
+    border: none;
+  }
+
+  .card-header {
+    h3 {
+      button {
+        border: 0;
+        color: $tundora;
+        padding: 0;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,373 @@
+.home {
+  .masthead {
+    min-height: 535px;
+    position: relative;
+
+    .hero-video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-width: 100%;
+      height: 535px;
+      max-height: 535px;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+
+      video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .promotion {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    padding-top: 5.5rem;
+    padding-bottom: 21rem;
+    padding-right: 0;
+    padding-left: 0;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$md-up} {
+      padding-right: 4rem;
+      padding-left: 4rem;
+      padding-bottom: 23rem;
+    }
+
+    @media #{$lg-up} {
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 6rem;
+      padding-left: unset;
+      padding-right: unset;
+    }
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+
+      &:last-of-type {
+        position: absolute;
+        top: 62%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        @media #{$md-up} {
+          top: 65%;
+        }
+
+        @media #{$lg-up} {
+          position: relative;
+          top: unset;
+          width: unset;
+          height: unset;
+          z-index: 2;
+        }
+      }
+    }
+
+    h2 {
+      color: $disco;
+      font-size: 4.2rem;
+      font-weight: 800;
+      line-height: 5.2rem;
+
+      @media #{$md-up} {
+        font-size: 5.2rem;
+        line-height: 6.2rem;
+      }
+
+      @media #{$xl-up} {
+        font-size: 6.2rem;
+        line-height: 7.2rem;
+      }
+    }
+
+    p {
+      color: $black;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 4rem;
+    }
+
+    a {
+      align-self: center;
+      margin-top: 1rem;
+    }
+
+    img {
+      margin-left: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media #{$lg-up} {
+        position: relative;
+        left: unset;
+        transform: unset;
+      }
+    }
+  }
+
+  .photo-wall {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+
+    .container {
+      max-width: 100%;
+      @media #{$xl-up} {
+        max-width: 1140px;
+      }
+    }
+
+    .col-md-8 {
+      padding-left: 0;
+      padding-right: 0;
+      @media #{$md-up} {
+        padding-left: 15px;
+        padding-right: 8px;
+      }
+    }
+
+    .col-md-4 {
+      padding-top: 8px;
+      padding-left: 0;
+      padding-right: 0;
+      @media #{$md-up} {
+        padding-top: 0;
+        padding-right: 15px;
+      }
+    }
+
+    .grid.two-across {
+      grid-gap: 8px;
+      grid-template-columns: repeat(1, 1fr);
+
+      @media #{$md-up} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      >div {
+        position: relative;
+
+        &:before {
+          content: '';
+          background-color: rgba(#333,.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 280px;
+
+      @media #{$md-up} {
+        height: 100%;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+      margin-bottom: 0;
+      text-align: center;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%,-50%);
+
+      @media #{$md-up} {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+      }
+
+      @media #{$lg-up} {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+
+      @media #{$xxl-up} {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+
+      @media #{$xxxl-up} {
+        font-size: 3.7rem;
+        line-height: 4.7rem;
+      }
+
+      strong {
+        font-weight: 700;
+        display: block;
+      }
+    }
+
+    .grid.one-across {
+      height: unset;
+
+      @media #{$md-up} {
+        height: 100%;
+      }
+
+      >div {
+        position: relative;
+
+        &:before {
+          content: '';
+          background-color: rgba(#333,.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      // img {
+      //   max-height: 709px;
+      // }
+    }
+  }
+
+  .products {
+    grid-gap: 5rem;
+    grid-template-columns: repeat(1,1fr);
+
+    @media #{$sm-up} {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @media #{$md-up} {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1.5rem;
+      position: relative;
+
+      @media #{$xl-up} {
+        padding: 0 2.8rem;
+      }
+
+      img {
+        align-self: center;
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 2.7rem;
+        margin-top: 1rem;
+        text-transform: uppercase;
+
+        @media #{$sm-up} {
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+        }
+
+        @media #{$lg-up} {
+          font-size: 1.6rem;
+          line-height: 2.7rem;
+        }
+
+        @media #{$xl-up} {
+          font-size: 1.8rem;
+        }
+
+        small {
+          display: block;
+          font-weight: 400;
+        }
+      }
+
+      .product-price {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+
+        @media #{$lg-up} {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+
+        @media #{$xl-up} {
+          font-size: 1.8rem;
+        }
+
+
+        &.reg {
+          text-decoration: line-through;
+          margin-top: auto;
+        }
+      }
+
+      a {
+        &:hover {
+          ~p {
+            color: $disco;
+          }
+        }
+      }
+    }
+  }
+
+  .promo {
+    position: relative;
+
+    &:before {
+      content: '';
+      background-color: rgba(#4d4d4d,.59);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .promo-inner {
+      h2 {
+        font-size: 5rem;
+        line-height: 6rem;
+
+        @media #{$xl-up} {
+          font-size: 6rem;
+          line-height: 7rem;
+        }
+
+      }
+
+      p {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+
+        @media #{$xl-up} {
+          font-size: 2.7rem;
+        }
+      }
+    }
+  }
+}

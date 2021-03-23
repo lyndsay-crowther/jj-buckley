@@ -1,0 +1,74 @@
+.card-deck {
+  display: grid;
+  &.three-across {
+    grid-column-gap: 26px;
+    grid-row-gap: 26px;
+    grid-template-columns: repeat(1,1fr);
+  
+    @media #{$sm-up} {
+      grid-template-columns: repeat(2,1fr);
+      grid-row-gap: 50px;
+    }
+  
+    @media #{$md-up} {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+  .card {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  
+    @media #{$lg-up} {
+      padding: 0 3rem;
+    }
+  
+    .card-image {
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+  
+    img {
+      align-self: center;
+      transform: scale(1);
+      transition: transform 0.4s ease-in-out;
+      overflow: hidden;
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 3rem;
+    }
+  
+    p {
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      text-align: center;
+    }
+  
+    time {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      margin-bottom: 4rem;
+    }
+  
+    a:not(.m-btn) {
+      color: $disco;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 2.6rem;
+    }
+  
+    a {
+      margin-top: auto;
+    }
+  }
+}

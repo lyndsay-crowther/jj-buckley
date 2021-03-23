@@ -1,0 +1,50 @@
+.masthead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 449px;
+
+  &.masthead-lg {
+    min-height: 550px;
+  }
+
+  &.with-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    * {
+      color: white;
+    }
+  }
+
+  &.darken {
+    position: relative;
+
+    &:before {
+      background-color: rgba($tundora, .59);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+
+    ~p {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-top: 3rem;
+    }
+
+    ~.m-btn {
+      margin-top: 3.5rem;
+    }
+  }
+}

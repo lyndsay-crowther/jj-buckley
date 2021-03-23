@@ -1,0 +1,283 @@
+$link-color: $disco !default;
+$body-color: $dove-gray !default;
+$font-family-base: 'Open Sans', sans-serif !default;
+
+$breadcrumb-bg: transparent !default;
+$breadcrumb-font-size: 1.4rem !default;
+
+html,body {
+  color: $body-color;
+  font-family: $font-family-base;
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.941;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// a:not(.m-button) {
+//   color: $laser-gold;
+//   word-break: break-word;
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     color: darken($laser-gold,5%) !important;
+//     text-decoration: none !important;
+//     outline: 0 !important;
+//   }
+// }
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $link-color;
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    outline: none;
+  }
+}
+
+.abs-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+p,
+a:not(.m-btn),
+address,
+ul {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  @media #{$md-up} {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+.bullet-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  @media #{$md-up} {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &.one-across {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &.two-across {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.three-across {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.four-across {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.promo {
+  &.with-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    h2,
+    p {
+      color: $white;
+    }
+  }
+}
+
+section {
+  &.bordered {
+    border: 10px solid $white;
+
+    @media #{$md-up} {
+      border: 25px solid $white;
+    }
+  }
+
+  &.bg-mercury {
+    background-color: $mercury;
+  }
+}
+
+.smooth-border-image {
+  &:after {
+    opacity: 0;
+    z-index: 4;
+    width: auto;
+    height: auto;
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    border: 1px solid #fff;
+    transform: scale(0,0);
+    transition: transform 400ms,opacity 100ms ease 0s;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: scale(1,1);
+      transition: transform 500ms,opacity 300ms ease 0s;
+    }
+  }
+}
+
+.header-with-border {
+  border-bottom: 1px solid #4d4d4d;
+
+  h1, h2 {
+    color: #4d4d4d;
+  }
+}
+
+.box-grey {
+  background-color: $wild-sand;
+  padding: 2rem;
+}
+
+.breadcrumb {
+  background-color: $breadcrumb-bg;
+  font-size: $breadcrumb-font-size;
+  padding: 0;
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
+    &:after {
+      content: '';
+      background-color: $tundora;
+      width: 1px;
+      height: 1rem;
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.active {
+      color: $disco;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.social-share {
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    img {
+      height: 50px;
+    }
+
+    &:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.heading-with-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .m-btn+.m-btn {
+    margin-left: 1rem;
+  }
+}
+
+.alternating-layout {
+// 1. Add horizontal and vertical spacing between items.
+// 2. Add vertical spacing between rows.
+// 3. Make the order of image / text alternate.
+// 4. Take all the available space.
+// 5. Require at least this amount of space or wrap.
+// 6. Prevent images from sticking to the right in single column mode.
+// 7. (Try to) take as much space as the content needs.
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1em; // 1
+    margin-left: -3.5em; // 1
+    align-items: center;
+    
+    &:not(:first-of-type) {
+      margin-top: 3em; // 2
+    }
+    
+    &:nth-child(even) {
+      flex-direction: row-reverse; // 3
+    }
+    
+    &-body {
+      padding-top: 1em; // 1
+      padding-left: 3.5em; // 1
+      flex-grow: 9999; // 4
+      flex-basis: 15rem; // 5
+      
+      &-figure {
+        margin-right: auto; // 6
+        flex-grow: 1; // 7
+
+        // By using `max-content` we can get a little
+        // nicer responsive behavior because the image
+        // automatically shrinks if not enough space is
+        // available, but also the column is not getting
+        // to large than the image if a lot of space
+        // is available.
+        @supports (max-width: max-content) {
+          min-width: 15rem; // 5
+          max-width: max-content;
+          flex-basis: 15rem; // 5
+          flex-grow: 99999;
+        }
+      }
+    }
+  }
+}
+
+

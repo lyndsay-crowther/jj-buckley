@@ -1,0 +1,39 @@
+.leadership {
+
+  .team-member {
+    >div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 3rem 0;
+
+      @media #{$sm-up} {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      h3 {
+        color: $disco;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 4rem;
+        margin-left: 0;
+        margin-top: 3rem;
+
+        @media #{$sm-up} {
+          margin-left: 3rem;
+          margin-top: 0;
+        }
+    
+        @media #{$md-up} {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}

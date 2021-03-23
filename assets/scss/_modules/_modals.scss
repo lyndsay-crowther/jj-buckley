@@ -1,0 +1,155 @@
+.modal {
+  .close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    @media #{$lg-up} {
+      font-size: 5.2rem;
+      line-height: 6.2rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    @media #{$lg-up} {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &#newsletter {
+    background-color: rgba(#e6e6e6,.83);
+    .close {
+      color: $white;
+      font-size: 2rem;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 2;
+    }
+
+    .modal-body {
+      background-image: url(../images/newsletter-bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 4rem 5rem 7rem 5rem;
+      position: relative;
+      text-align: center;
+
+      @media #{$md-up} {
+        padding: 4rem 6rem 7rem 6rem;
+      }
+
+      @media #{$lg-up} {
+        padding: 4rem 12rem 7rem 12rem;
+      }
+
+      &:after {
+        content: '';
+        background-color: rgba(#4d4d4d, .3);
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      h2 {
+        color: $white;
+        position: relative;
+        z-index: 1;
+      }
+
+      p {
+        color: $white;
+        position: relative;
+        z-index: 1;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg-up} {
+          flex-direction: row;
+        }
+
+        input {
+          border: none;
+          background-color: $white;
+          font-size: 1.5rem;
+          margin-right: 1.5rem;
+          padding: 1rem;
+          width: 100%;
+          height: 40px;
+  
+          &:focus {
+            outline: 0;
+          }
+  
+          &::placeholder {
+            color: #808080;
+            text-transform: uppercase;
+          }
+        }
+
+        button {
+          height: 4rem;
+          line-height: 4rem;
+          margin-top: 2rem;
+
+          @media #{$lg-up} {
+            margin-top: 0;
+          }
+        }
+      }
+
+      small {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg-up} {
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+
+    .modal-footer {
+      padding: 0 2rem;
+      >div {
+        flex: 1;
+      }
+
+      img {
+        &:first-of-type {
+          max-width: 240px;
+        }
+
+        &:last-of-type {
+          max-width: 155px;
+        }
+      }
+    }
+  }
+}
