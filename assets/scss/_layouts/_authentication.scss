@@ -1,0 +1,39 @@
+.authentication {
+  .login-container {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$lg-up} {
+      flex-direction: row;
+    }
+
+    >div {
+      padding: 2rem;
+
+      &:first-of-type {
+        border-right: none;
+        padding-left: 0;
+
+        @media #{$lg-up} {
+          border-right: 1px solid $tundora;
+        }
+      }
+
+      &.block-customer-login {
+        padding-left: 0;
+
+        @media #{$lg-up} {
+          padding-left: 3rem;
+        }
+        
+      }
+    }
+
+    h2 {
+      color: $tundora;
+      font-size: 3.2rem;
+      line-height: 4.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

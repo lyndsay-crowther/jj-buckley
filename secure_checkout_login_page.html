@@ -12,7 +12,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet"> 
     <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body class="secure-checkout">
+<body class="authentication">
     <header class="global-header">
         <a class="skip-link sr-only sr-only-focusable" href="#main-content">Skip to content</a>
         <div class="header-top">
@@ -333,118 +333,36 @@
     <main id="main-content">
         <section class="pt-7 pb-11">
             <div class="container">
-                <div class="row">
+                <div class="row mb-1">
                     <div class="col-12">
-                        <div class="heading-with-btns">
-                            <h1>Secure checkout</h1>
-                            <div class="steps">
-                                <div class="active"><strong>STEP 1</strong> ADDRESSES</div>
-                                <div><strong>STEP 2</strong> Shipping</div>
-                                <div><strong>STEP 3</strong> payment</div>
-                            </div>
-                        </div>
+                        <h1>SIGN IN</h1>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row">
                     <div class="col-12">
-                        <form action="" id="frm-checkout">
-                            <div id="fields-1" style="display: none;">
-                                <p>Please fill in the information requested below to complete your purchase.</p>
-                                <div class="grid two-across">
-                                    <div>
-                                        <h2>Shipping Address</h2>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-first_name" value="" class="form-control required" placeholder="First Name *" id="id_shipping_address-first_name" aria-label="Shipping Address First Name required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-last_name" value="" class="form-control required" placeholder="Last Name *" id="id_shipping_address-last_name" aria-label="Shipping Address Last Name required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-company" value="" class="form-control" placeholder="Company or C/O" id="id_shipping_address-company" aria-label="Shipping Address Company">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-address" value="" class="form-control required" placeholder="Address Line 1 *" id="id_shipping_address-address" aria-label="Shipping Address required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-address-2" value="" class="form-control" placeholder="Address Line 2" id="id_shipping_address-address" aria-label="Shipping Address Line 2">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-city" value="" class="form-control required" placeholder="City *" id="id_shipping_address-city" aria-label="Shipping Address City required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-state" class="form-control required" placeholder="State *" id="id_shipping_address-state" aria-label="Shipping Address State required">
-                                        </div>
-                                        <div class="form-group">
-                                            <select name="" name="shipping_address-country" class="form-control required" id="id_shipping_address-country" aria-label="Shipping address country required">
-                                                <option value="" selected>Select your Country *</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="shipping_address-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_shipping_address-postal_code" aria-label="Shipping Address postal code required">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h2 class="d-flex">Billing Address <span><input type="checkbox" name="same_as_shipping" id="id_same_as_shipping" class="mr-3"><label for="id_same_as_shipping">Same as shipping address</label></span></h2>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-first_name" value="" class="form-control required" placeholder="First Name *" id="id_billing_address-first_name" aria-label="Billing address first name required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-last_name" value="" class="form-control required" placeholder="Last Name *" id="id_billing_address-last_name" aria-label="Billing address last name required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-address" value="" class="form-control required" placeholder="Address Line 1 *" id="id_billing_address-address" aria-label="Billing address required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-address-2" value="" class="form-control" placeholder="Address Line 2" id="id_billing_address-address-2" aria-label="Billing address line 2">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-city" value="" class="form-control required" placeholder="City *" id="id_billing_address-city" aria-label="Billing address city required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-state" class="form-control" placeholder="State *" id="id_billing_address-state" aria-label="Billing address state required">
-                                        </div>
-                                        <div class="form-group">
-                                            <select name="" name="billing_address-country" class="form-control required" id="id_billing_address-country" aria-label="Billing address country required">
-                                                <option value="" selected>Select your Country *</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_address-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_billing_address-postal_code" aria-label="Billing address postal code required">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h2>Billing contact information</h2>
-                                        <div class="form-group">
-                                            <input type="text" name="billing_contact-postal_code" class="form-control required" placeholder="US Zip Code *" id="id_billing_contact-postal_code" aria-label="Billing contact postal code required">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center mt-5">
-                                    <button type="button" class="m-btn m-btn-default next">Continue to shipping options</button>
-                                </div>            
+                        <div class="login-container">
+                            <div class="block-new-customer">
+                                <h2>NEW CUSTOMER?</h2>
+                                <p>You will be able to create a new account following the checkout process.</p>
+                                <a href="" class="m-btn m-btn-default mt-5">Checkout as guest</a>
                             </div>
-                            <div id="fields-2">
-                                <h2>Shipping options</h2>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rbtShippingOptions" id="rbt-1" value="option1" checked>
-                                    <label class="form-check-label" for="rbt-1">
-                                      send to storage $(0.00)
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rbtShippingOptions" id="rbt-2" value="option2">
-                                    <label class="form-check-label" for="rbt-2">
-                                      customer pick-up $(0.00)
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rbtShippingOptions" id="rbt-3" value="option3">
-                                    <label class="form-check-label" for="rbt-3">
-                                      GSO $(19.00)
-                                    </label>
-                                  </div>
+                            <div class="block-customer-login">
+                                <h2>ALREADY HAVE AN ACCOUNT?</h2>
+                                <p>Enter your email address and password to use “Express Checkout” for faster shopping.</p>
+                                <form action="" class="mt-5">
+                                    <div class="form-group">
+                                        <input type="email" name="login_username" placeholder="E-mail" class="required form-control" id="id_login_username" aria-label="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="login_password" type="password" placeholder="Password" class="equired form-control" id="id_login_password"  aria-label="Password">
+                                    </div>
+                                    <div class="actions">
+                                        <a href="">Forgot Your Password?</a>
+                                    </div>
+                                    <button type="submit" class="m-btn m-btn-default mt-5">Express checkout</button>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

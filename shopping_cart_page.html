@@ -471,48 +471,31 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <form action="" class="grid one-across">
-                                <div>
-                                    <div class="product-image"></div>
-                                    <div class="product-description">
-                                        <h3></h3>
-                                        <p></p>
-                                        <small></small>
-                                    </div>
-                                    <div class="cart-options">
-                                        <div class="unit-price"></div>
-                                        <div class="quantity"></div>
-                                        <div class="sub-total"></div>
-                                    </div>
-                                </div>
-                            </form> -->
-                        </div>
-                        <div class="payment-details">
-                            <div class="estimates">
-                                <h2>Estimate my taxes & shipping</h2>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                      Residential
-                                    </label>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div>
-                            <div>
+                        <div class="payment-info">
+                            <div class="estimates">
                                 <p>Estimate my taxes & shipping</p>
-                                <form action="">
-                                    <p>checkboxes</p>
-                                    <p>Enter 5-digit US zip code</p>
-                                    <input type="text">
-                                    <button type="submit">Apply</button>
-                                </form>
+                                <div class="form-check form-check-inline">
+                                    <input id="rbtResidential" type="radio" name="radioEstimates" value="rbtResidential" checked="checked">
+                                    <label for="rbtResidential">Residential</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input id="rbtBusiness" type="radio" name="radioEstimates" value="rbtBusiness">
+                                    <label for="rbtBusiness">Business</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtShippingzipCode">Enter 5-digit US zip code</label>
+                                    <div class="form-inline mt-3">
+                                        <input type="text" class="form-control" id="txtShippingzipCode">
+                                        <button class="m-btn m-btn-default">Apply</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
+                            <div class="totals">
                                 <p>Sub-total <span>$74.94</span></p>
                                 <p>Sales tax <span>$---.---</span></p>
                                 <p>Shipping method <span>$---.---</span></p>
@@ -522,9 +505,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="">Proceed to check out</a>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <a href="" class="m-btn m-btn-default">Proceed to check out</a>
                     </div>
                 </div>
             </div>
@@ -667,3 +650,4 @@
     </footer>
     <script src="assets/js/dist/scripts.js"></script>
 </body>
+</html>

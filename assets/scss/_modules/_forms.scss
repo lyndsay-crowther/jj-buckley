@@ -11,7 +11,7 @@ form {
     color: #3a3a38;
     font-size: 1.4rem;
     height: 45px;
-    padding: 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     &::-moz-placeholder {
       color: #3a3a38;
@@ -21,6 +21,7 @@ form {
     &::-webkit-input-placeholder  { color: #3a3a38; }
 
     &:focus {
+      background-color: #d0d3da;
       border-color:$disco;
       box-shadow: none;
     }

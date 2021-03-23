@@ -217,16 +217,30 @@ section {
 
 .heading-with-btns {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media #{$lg-up} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   h1 {
     font-size: 4rem;
     line-height: 5rem;
+    margin-bottom: 1.5rem;
+
+    @media #{$lg-up} {
+      margin-bottom: 0;
+    }
   }
 
-  .m-btn+.m-btn {
-    margin-left: 1rem;
+  .m-btn {
+    font-size: 1.5rem;
+    min-width: 149px;
+    +.m-btn {
+      margin-left: 1rem;
+    }
   }
 }
 
