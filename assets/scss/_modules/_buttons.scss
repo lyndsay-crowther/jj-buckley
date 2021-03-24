@@ -15,7 +15,7 @@ $btn-font-weight: 700;
 $btn-font-family: 'Open Sans', sans-serif;
 
 // (name background-color font-color) add as many as you like.
-$button-schemes: ('default' $disco $white) ('grey' #808080 $white);
+$button-schemes: ('default' $disco $white) ('grey' #808080 $white) ('link-default' transparent $disco);
 $button-borders: ('button-border-1' transparent #e8ded8 #e8ded8 #e8ded8 ) ('button-border-2' transparent blue blue white);
 
 $btn-types: 'flat' 'rounded' 'border' 'gradient';
@@ -126,5 +126,13 @@ input#{$prefix}, button#{$prefix} {
 
 button:focus {
   outline: none;
+}
+
+button[class*="btn-link"] {
+  font-size: 1.4rem;
+  line-height: unset;
+  padding: 0;
+  height: auto;
+  min-width: unset;
 }
 

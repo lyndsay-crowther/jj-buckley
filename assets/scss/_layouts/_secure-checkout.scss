@@ -55,4 +55,131 @@
       margin-bottom: 3rem;
     }
   }
+
+  #fields-2 {
+    >label {
+      color: $tundora;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 2.8rem;
+      text-transform: uppercase;
+    }
+
+    .form-check {
+      label {
+        font-size: 1.4rem;
+      }
+
+      input {
+        margin-top: .4rem;
+      }
+
+      &:first-of-type {
+        margin-top: 1rem;
+      }
+    }
+
+    .form-group {
+      margin-top: 1rem;
+    }
+
+    .calendar {
+      max-width: 357px;
+    }
+  }
+
+  #fields-3 {
+    .grid {
+      border-bottom: 1px solid $tundora;
+      &.two-across {
+        grid-template-columns: 60% 40%;
+        grid-gap: 5rem;
+      }
+
+      >div {
+        margin-bottom: 4rem;
+        &:first-of-type {
+          border-right: 1px solid $tundora;
+          padding-right: 5rem;
+        }
+      }
+    }
+
+    table {
+      margin-bottom: 1rem;
+      thead {
+        th {
+          &:first-of-type {
+            width: 55%;
+          }
+        }
+      }
+      tbody {
+        td:first-of-type {
+          text-align: left;
+        }
+      }
+
+      tfoot {
+        .grandtotal {
+          td {
+            color: $disco;
+          }
+        }
+      }
+    }
+
+    #gift {
+      padding: 1rem 0;
+
+      label {
+        color: $tundora;
+        font-weight: 600;
+      }
+
+      .form-group {
+        display: flex;
+
+        button {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          font-size: 1.4rem;
+          min-width: 90px;
+          height: 3.4rem;
+          line-height: 3.4rem;
+        }
+      }
+
+      .form-control {
+        max-width: 30%;
+        border-radius: 0;
+        height: 3.4rem;
+      }
+
+      p {
+        line-height: 2rem;
+      }
+    }
+
+    h4 {
+      color: $tundora;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    address {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+
+      ~h4 {
+        margin-top: 1.3rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
 }

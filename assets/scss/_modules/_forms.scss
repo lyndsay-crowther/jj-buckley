@@ -1,5 +1,9 @@
 form {
 
+  .form-group {
+    position: relative;
+  }
+
   label {
     color: #1d2734;
     font-size: 1.2rem;
@@ -79,5 +83,17 @@ form {
         top: 10px;
       }
     }
+  }
+}
+
+.calendar {
+  input {
+    padding-right: 4rem;
+  }
+  svg {
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
 }

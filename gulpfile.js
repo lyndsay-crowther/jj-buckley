@@ -35,6 +35,7 @@ gulp.task('scripts', function() {
       'assets/js/vendors/bootstrap/modal.js',
       'assets/js/vendors/bootstrap/collapse.js',
       'assets/js/vendors/bootstrap/bootstrap-table.min.js',
+      'assets/js/vendors/bootstrap/bootstrap-datepicker.min.js',
       'assets/js/vendors/magnific-popup/jquery.magnific-popup.js',
       'assets/js/vendors/owlcarousel/owl.carousel.min.js',
       'assets/js/vendors/jquery.zoom.min.js',
