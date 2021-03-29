@@ -1,7 +1,11 @@
 .order-history {
   overflow-x: hidden;
   form {
-    width: 50%;
+    width: 100%;
+
+    @media #{$md-up} {
+      width: 50%;
+    }
 
     .form-group {
       flex: 1;
