@@ -1,0 +1,80 @@
+.order-history {
+  overflow-x: hidden;
+  form {
+    width: 50%;
+
+    .form-group {
+      flex: 1;
+    }
+  }
+
+  .results {
+    display: flex;
+    flex-direction: row;
+    color: $disco;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  table {
+    th {
+      position: relative;
+      padding-right: 30px;
+      white-space: nowrap;
+      // &:after {
+      //   content: '';
+      //   background-image: url(../images/directional-arrow-v2.svg);
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   width: 11px;
+      //   height: 7px;
+      //   position: absolute;
+      //   right: 15px;
+      //   top: 14px;
+      //   transform: rotate(-90deg);
+      // }
+
+      .both {
+        background-image: none !important;
+        &:after {
+          content: '';
+          background-image: url(../images/directional-arrow-v2.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 11px;
+          height: 7px;
+          position: absolute;
+          right: 15px;
+          top: 14px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      .desc,
+      .asc {
+        &:after {
+          content: '';
+          background-image: url(../images/directional-arrow-v2.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 11px;
+          height: 7px;
+          position: absolute;
+          right: 15px;
+          top: 14px;
+        }
+      }
+
+      .asc {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

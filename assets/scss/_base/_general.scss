@@ -244,6 +244,26 @@ section {
   }
 }
 
+.heading-with-inline-fields {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  form {
+    display: flex;
+    flex-direction: row;
+
+    .form-group {
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
 .alternating-layout {
 // 1. Add horizontal and vertical spacing between items.
 // 2. Add vertical spacing between rows.
