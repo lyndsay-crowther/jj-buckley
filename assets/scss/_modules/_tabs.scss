@@ -1,0 +1,30 @@
+.nav-tabs {
+  border: 0;
+  .nav-link {
+    background-color: $tundora;
+    border: 0;
+    border-radius: 0;
+    color: $white !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3rem;
+    max-width: 160px;
+    padding: .55rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    small {
+      display: block;
+      font-weight: 400;
+      margin-top: .3rem;
+    }
+
+    &.active {
+      background-color: #808080;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: .5rem;
+    }
+  }
+}

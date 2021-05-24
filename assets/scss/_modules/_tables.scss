@@ -48,4 +48,36 @@ table {
       text-align: right;
     }
   }
+
+  &.table-bordered {
+    border: none !important;
+
+    tbody {
+      td {
+        border: none !important;
+        border-left: 1px solid $tundora !important;
+        border-bottom: 2px solid #fff !important;
+
+        &:first-child {
+          border-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.pagination-detail {
+  display: none;
+}
+
+.fixed-table-pagination {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    float: none !important;
+
+    .page-item {
+      padding: 0 .3rem;
+    }
+  }
 }

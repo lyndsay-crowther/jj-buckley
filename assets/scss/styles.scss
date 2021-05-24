@@ -22,7 +22,9 @@
         "_layouts/authentication",
         "_layouts/secure-checkout",
         "_layouts/account-overview",
-        "_layouts/order-history";
+        "_layouts/order-history",
+        "_layouts/my-wines",
+        "_layouts/profile";
 
 // Modules
 @import "_modules/announcement-bar",
@@ -36,7 +38,9 @@
         "_modules/accordion",
         "_modules/forms",
         "_modules/modals",
-        "_modules/tables";
+        "_modules/tables",
+        "_modules/tabs",
+        "_modules/checkbox";
 
 
 
