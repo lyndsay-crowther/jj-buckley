@@ -15,7 +15,7 @@ $btn-font-weight: 700;
 $btn-font-family: 'Open Sans', sans-serif;
 
 // (name background-color font-color) add as many as you like.
-$button-schemes: ('default' $disco $white) ('grey' #808080 $white) ('link-default' transparent $disco);
+$button-schemes: ('default' $disco $white) ('grey' #808080 $white) ('link-default' transparent $black);
 $button-borders: ('button-border-1' transparent #e8ded8 #e8ded8 #e8ded8 ) ('button-border-2' transparent blue blue white);
 
 $btn-types: 'flat' 'rounded' 'border' 'gradient';

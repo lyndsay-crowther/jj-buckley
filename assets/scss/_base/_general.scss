@@ -1,6 +1,6 @@
-$link-color: $disco !default;
-$body-color: $dove-gray !default;
-$font-family-base: 'Open Sans', sans-serif !default;
+$link-color: $black !default;
+$body-color: $black !default;
+$font-family-base: 'Cinzel', serif !default;
 
 $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 1.4rem !default;
@@ -32,7 +32,7 @@ img {
 }
 
 a {
-  color: $link-color;
+  color: $black;
   &:hover,
   &:focus {
     text-decoration: none !important;
@@ -328,4 +328,27 @@ section {
   }
 }
 
+.fancy-heading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &.centered {
+    text-align: center;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    border-top: 1px solid;
+    border-color: $laser-gold;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
+
+  &:after {
+    margin: 0 0 0 20px;
+  }
+}
 

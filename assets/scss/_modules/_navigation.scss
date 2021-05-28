@@ -3,13 +3,14 @@ body.no-scroll {
 }
 
 .global-header {
+  background-color: $black;
   padding-top: 48px;
   transition: all .24s ease-in-out;
 }
 
 .header-top {
   .banner {
-    background-color: $disco;
+    background-color: $laser-gold;
     padding: 1.2rem;
     position: absolute;
     top: 0;
@@ -42,11 +43,11 @@ body.no-scroll {
   }
 
   .header-top-nav {
-    background-color: $mercury;
+    background-color: $black;
     padding: .8rem 0;
 
     .header-top-nav-inner {
-      color: #4d4d4d;
+      color: $laser-gold;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,7 +58,7 @@ body.no-scroll {
         display: flex;
         align-items: center;
         a {
-          color: #4d4d4d;
+          color: $laser-gold;
           display: flex;
           align-items: center;
           font-size: 1.3rem;
@@ -76,14 +77,18 @@ body.no-scroll {
         min-width: 165px;
 
         input {
-          background-color: #f2f2f2;
-          border: none;
+          background-color: #000;
+          border: 1px solid $laser-gold;
+          color: $laser-gold;
+          font-size: 1.2rem;
+          font-weight: 300;
           height: 22px;
-          padding-right: 2.2rem;
+          line-height: 22px;
+          padding: 0 2.2rem 0 .5rem;
 
           &:focus {
-            border-color: none;
-            border-color: transparent;
+            // border-color: none;
+            border-color: $laser-gold;
             outline: 0;
             box-shadow: none;
           }
@@ -122,11 +127,11 @@ body.no-scroll {
 
 .header-bottom {
   position: relative;
-  border-bottom: 8px solid $disco;
+  border-top: 2px solid $laser-gold;
   height: 80px;
 
   @media #{$lg-up} {
-    height: 53px;
+    height: 48px;
   }
 }
 
@@ -140,7 +145,7 @@ body.no-scroll {
   perspective: 2000px;
 
   @media #{$lg-up} {
-    height: 45px;
+    height: 46px;
   }
 
   >.container {
@@ -166,7 +171,7 @@ body.no-scroll {
 
   a {
     text-decoration: none;
-    color: $dove-gray;
+    color: $laser-gold;
     transition: color .1s;
 
     &:hover {
@@ -222,18 +227,18 @@ body.no-scroll {
 
   .rootLink {
     display: inline-block;
-    height: 45px;
+    height: 46px;
     white-space: nowrap;
     user-select: none;
     font-size: 1.6rem;
-    line-height: 45px;
+    line-height: 46px;
     font-weight: 700;
     margin: 0;
     padding: 0 1.8rem;
     text-transform: uppercase;
 
     &:hover {
-      color: $disco;
+      color: darken($laser-gold, 7%);
     }
   }
 
@@ -242,7 +247,7 @@ body.no-scroll {
     z-index: 1000;
     left: 0;
     right: 0;
-    top: 50px;
+    top: 46px;
     pointer-events: none;
     transform: rotateX(-15deg);
     transform-origin: 50% -50px;
@@ -260,7 +265,7 @@ body.no-scroll {
   }
 
   .dropdownBackground {
-    background: #f4f4f4;
+    background: #000;
     border-radius: 0;
     overflow: hidden;
     width: 1px;
@@ -357,7 +362,7 @@ body.no-scroll {
 
     ul {
       li {
-        color: #4d4d4d;
+        color: #FFF;
         font-size: 1.4rem;
         white-space: nowrap;
        
@@ -369,12 +374,12 @@ body.no-scroll {
         }
 
         a {
-          color: #4d4d4d;
+          color: $laser-gold;
           display: inline-block;
           margin-bottom: .8rem;
           text-transform: uppercase;
           &:hover {
-            color: $disco;
+            color: lighten($laser-gold, 7%);
           }
         }
       }
@@ -515,7 +520,7 @@ body.no-scroll {
               margin-bottom: .8rem;
               text-transform: uppercase;
               &:hover {
-                color: $disco;
+                color: lighten($laser-gold, 7%);;
               }
             }
           }
