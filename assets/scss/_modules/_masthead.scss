@@ -23,7 +23,8 @@
     position: relative;
 
     &:before {
-      background-color: rgba($tundora, .59);
+      // background-color: rgba($tundora, .59);
+      background-color: rgba($black, .59);
       content: '';
       position: absolute;
       top: 0;

@@ -1,6 +1,6 @@
 $link-color: $black !default;
 $body-color: $black !default;
-$font-family-base: 'Cinzel', serif !default;
+$font-family-base: 'Open Sans', sans-serif !default;
 
 $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 1.4rem !default;
@@ -37,6 +37,17 @@ a {
   &:focus {
     text-decoration: none !important;
     outline: none;
+  }
+}
+
+.links-disco {
+  a {
+    color: $disco;
+
+    &:hover,
+    &:focus {
+      color: darken($disco, 5%);
+    }
   }
 }
 
@@ -98,6 +109,10 @@ ul {
   &.four-across {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  &.five-across {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .promo {
@@ -110,6 +125,14 @@ ul {
     h2,
     p {
       color: $white;
+    }
+  }
+
+  &.darken {
+    position: relative;
+
+    &:before {
+      background-color: rgba($black, .59) !important;
     }
   }
 }
@@ -167,6 +190,24 @@ section {
   padding: 2rem;
 }
 
+.bordered-top {
+  border-top: 1px solid #B3B3B3;
+  padding: 2rem;
+
+  &:last-of-type {
+    border-bottom: 1px solid #B3B3B3;
+  }
+}
+
+.bordered-bottom {
+  border-bottom: 1px solid #B3B3B3;
+  padding: 2rem;
+
+  // &:last-of-type {
+  //   border-bottom: 1px solid #B3B3B3;
+  // }
+}
+
 .breadcrumb {
   background-color: $breadcrumb-bg;
   font-size: $breadcrumb-font-size;
@@ -183,16 +224,13 @@ section {
       content: '';
       background-color: $tundora;
       width: 1px;
-      height: 1rem;
+      height: 1.2rem;
       position: absolute;
       right: 4px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 5px;
     }
 
     &.active {
-      color: $disco;
-
       &:after {
         display: none;
       }

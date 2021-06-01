@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////
 $prefix: '.m-btn';
 $btn-bgcolor: white !default;
-$btn-height: 4.4rem !default;
-$btn-line-height: 4.4rem !default;
+$btn-height: 4rem !default;
+$btn-line-height: 3.7rem !default;
 
 //////////////////////////////////////////////////////////
 // TYPOGRAPHY ////////////////////////////////////////////
@@ -16,7 +16,7 @@ $btn-font-family: 'Open Sans', sans-serif;
 
 // (name background-color font-color) add as many as you like.
 $button-schemes: ('default' $disco $white) ('grey' #808080 $white) ('link-default' transparent $black);
-$button-borders: ('button-border-1' transparent #e8ded8 #e8ded8 #e8ded8 ) ('button-border-2' transparent blue blue white);
+$button-borders: ('default' transparent $disco $disco white ) ('white' transparent white rgba(255,255,255,.1) white);
 
 $btn-types: 'flat' 'rounded' 'border' 'gradient';
 
@@ -27,10 +27,10 @@ $btn-build-border: false;
   background-color: $btn-bgcolor;
   border-radius: 5px;
   height: $btn-height;
-  line-height: $btn-height;
+  line-height: 3.7rem;
   padding: 0px 1.7rem;
   font-weight: $btn-font-weight;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: $btn-font-family;
   color:  $btn-font-color;
   text-shadow: none;
@@ -64,7 +64,7 @@ $btn-build-border: false;
 input#{$prefix}, button#{$prefix} {
   border: none;
   height: $btn-height;
-  line-height: $btn-height;
+  line-height: 3.7rem;
   cursor: pointer;
   -webkit-appearance: none;
 }
@@ -105,7 +105,7 @@ input#{$prefix}, button#{$prefix} {
   $btn-hover-color: nth($button-border, 5);
   
   #{$prefix}-border-#{$btn-name} {
-    border: 1px solid $btn-color;
+    border: 1px solid $btn-color !important;
     background-color: $btn-background;
     border-radius: 5px;
     color: $btn-color;
@@ -134,5 +134,9 @@ button[class*="btn-link"] {
   padding: 0;
   height: auto;
   min-width: unset;
+}
+
+.m-btn-xl {
+  min-width: 230px;
 }
 

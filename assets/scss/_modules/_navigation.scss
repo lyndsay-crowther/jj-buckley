@@ -75,6 +75,7 @@ body.no-scroll {
       .header-search {
         position: relative;
         min-width: 165px;
+        margin-right: 1.2rem;
 
         input {
           background-color: #000;
@@ -122,6 +123,10 @@ body.no-scroll {
   @media #{$lg-up} {
     display: block;
     padding: 2.1rem 0;
+  }
+
+  img {
+    max-width: 220px;
   }
 }
 

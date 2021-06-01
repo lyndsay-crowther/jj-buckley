@@ -61,10 +61,16 @@
     }
   
     a:not(.m-btn) {
-      color: $disco;
+      color: $black;
       font-size: 1.6rem;
       font-weight: 600;
       line-height: 2.6rem;
+      text-decoration: underline;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $laser-gold;
+      }
     }
   
     a {

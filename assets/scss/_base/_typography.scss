@@ -1,5 +1,8 @@
+$heading-font: 'Cinzel', serif;
+
 h1 {
   color: #000;
+  font-family: $heading-font;
   font-size: 3rem;
   font-weight: 600;
   line-height: 4rem;
@@ -13,6 +16,7 @@ h1 {
 
 h2 {
   color: #000;
+  font-family: $heading-font;
   font-size: 3.4rem;
   line-height: 4.4rem;
   text-transform: uppercase;
@@ -29,6 +33,7 @@ h2 {
 }
 
 h3 {
+  font-family: $heading-font;
   font-size: 2.6rem;
   line-height: 3.6rem;
 }
@@ -57,4 +62,8 @@ h3 {
   h2 {
     color: $tundora;
   }
+}
+
+.text-disco {
+  color: $disco;
 }
