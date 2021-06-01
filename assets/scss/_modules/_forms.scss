@@ -25,7 +25,6 @@ form {
     &::-webkit-input-placeholder  { color: #3a3a38; }
 
     &:focus {
-      background-color: #d0d3da;
       border-color:$disco;
       box-shadow: none;
     }
@@ -35,14 +34,6 @@ form {
       background-color: rgba(0, 0, 0, 0.3);
     }
   }
-
-  // select {
-  //   appearance: none;
-  //   background-image: url(../img/arrow-down.svg);
-  //   background-repeat: no-repeat;
-  //   background-position: 95% 50%;
-  //   background-size: 15px; 
-  // }
 
   textarea {
     min-height: 165px;

@@ -1,6 +1,4 @@
 .contact {
-
-
   .box-grey {
     padding: 4rem 3rem;
     &:first-of-type {
@@ -18,5 +16,47 @@
 
   h2 {
     font-weight: 700;
+  }
+
+  #assistance {
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+
+      @media #{$md-up} {
+        flex-direction: row;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        svg {
+          height: 30px;
+          position: relative;
+          top: 5px;
+          margin-right: 1.5rem;
+        }
+
+        &:first-of-type {
+          margin-right: 10rem;
+        }
+      }
+    }
+  }
+
+  .m-btn {
+    @media #{$sm-up} {
+      margin-bottom: 1.5rem;
+    }
+    ~.m-btn {
+      @media #{$sm-up} {
+        margin-left: .5rem;
+      }
+
+      @media #{$md-up} {
+        margin-left: 1rem;
+      }
+    }
   }
 }
