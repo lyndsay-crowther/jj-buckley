@@ -181,7 +181,7 @@ $(function() {
     if( $('.globalNav').hasClass('mobileNavActive') ) {
       $(this).attr("aria-expanded","true");
       $('.globalNav').css({
-        height: $(window).height()
+        height: $(window).height() - 18
       })
     } else {
       $('.globalNav').removeAttr('style');

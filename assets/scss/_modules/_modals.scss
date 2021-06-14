@@ -40,7 +40,7 @@
     }
 
     .modal-body {
-      background-image: url(../images/newsletter-bg.jpg);
+      background-image: url(../images/home/newsletter-bg.jpg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -58,7 +58,7 @@
 
       &:after {
         content: '';
-        background-color: rgba(#4d4d4d, .3);
+        background-color: rgba($black, .39);
         position: absolute;
         top: 0%;
         left: 0;
@@ -112,7 +112,7 @@
 
         button {
           height: 4rem;
-          line-height: 4rem;
+          line-height: 3rem;
           margin-top: 2rem;
 
           @media #{$lg-up} {
@@ -136,6 +136,8 @@
     }
 
     .modal-footer {
+      border-top: 0;
+      background-color: $laser-gold;
       padding: 0 2rem;
       >div {
         flex: 1;

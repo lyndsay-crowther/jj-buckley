@@ -1,4 +1,5 @@
 .shopping-cart {
+
   .product {
     display: flex;
     flex-direction: column;
@@ -25,7 +26,7 @@
     }
 
     h2 {
-      color: $tundora;
+      color: $black;
       font-size: 1.8rem;
       line-height: 2.8rem;
       margin-bottom: 0;
@@ -66,7 +67,7 @@
       }
 
       label {
-        color: $tundora;
+        color: $black;
         font-size: 1.4rem;
         margin-bottom: 1rem;
       }
@@ -88,7 +89,7 @@
         button,input {
           background-color: #e6e6e6;
           border: 0;
-          color: $tundora;
+          color: $black;
           float: left;
 
           &:focus {
@@ -126,7 +127,7 @@
   .payment-info {
     display: flex;
     flex-direction: column;
-    color: $tundora;
+    color: $black;
     font-size: 1.6rem;
 
     @media #{$md-up} {

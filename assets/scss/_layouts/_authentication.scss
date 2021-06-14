@@ -15,7 +15,7 @@
         padding-left: 0;
 
         @media #{$lg-up} {
-          border-right: 1px solid $tundora;
+          border-right: 1px solid #b3b3b3;
         }
       }
 
@@ -29,10 +29,8 @@
       }
     }
 
-    h2 {
-      color: $tundora;
-      font-size: 3.2rem;
-      line-height: 4.2rem;
+    h3 {
+      color: $black;
       margin-bottom: 2rem;
     }
   }

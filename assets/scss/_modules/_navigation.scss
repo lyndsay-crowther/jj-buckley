@@ -61,15 +61,23 @@ body.no-scroll {
           color: $laser-gold;
           display: flex;
           align-items: center;
-          font-size: 1.3rem;
+          font-size: 0;
           font-weight: 700;
-          padding-right: 2.4rem;
+          padding-right: 1rem;
+          white-space: nowrap;
+          text-indent: -9999px;
+
+          @media #{$sm-up} {
+            font-size: 1.3rem;
+            padding-right: 2.4rem;
+            text-indent: 0;
+          }
         }
       }
 
       img {
         margin-right: 2px;
-        max-width: 16px;
+        width: 16px;
       }
 
       .header-search {
@@ -216,7 +224,7 @@ body.no-scroll {
     a {
       &:nth-of-type(2) {
         img {
-          max-height: 53px;
+          height: 53px;
         }
       }
     }
@@ -451,12 +459,13 @@ body.no-scroll {
 
   &.mobileNavActive {
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .mobileMenu {
       background-color: #f4f4f4;
       display: block;
       position: relative;
-      top: 8px;
+      top: 6px;
     }
 
     .mobileBackground {

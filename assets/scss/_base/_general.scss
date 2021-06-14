@@ -190,6 +190,15 @@ section {
   padding: 2rem;
 }
 
+.box-white {
+  background-color: white;
+  padding: 2rem;
+
+  &.bordered {
+    border-bottom: 1px solid #b3b3b3;
+  }
+}
+
 .bordered-top {
   border-top: 1px solid #B3B3B3;
   padding: 2rem;
@@ -387,6 +396,12 @@ section {
 
   &:after {
     margin: 0 0 0 20px;
+  }
+
+  &.right-only {
+    &:before {
+      display: none;
+    }
   }
 }
 

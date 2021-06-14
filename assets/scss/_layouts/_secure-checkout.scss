@@ -2,8 +2,9 @@
   .steps {
     display: flex;
     div {
-      background-color: #808080;
-      color: white;
+      background-color: white;
+      border: 1px solid $black;
+      color: $black;
       text-align: center;
       text-transform: uppercase;
       font-size: 1.1rem;
@@ -22,6 +23,8 @@
 
       &.active {
         background-color: $disco;
+        border: none;
+        color: white;
       }
     }
   }
@@ -32,10 +35,8 @@
     }
   }
 
-  h2 {
-    color: $tundora;
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+  h3 {
+    text-transform: uppercase;
     margin-bottom: 3rem;
 
     span {

@@ -20,8 +20,27 @@
         width: 55%;
       }
     }
+
+    .three-sixty-wrapper {
+      position: relative;
+      width: 140px;
+      display: none;
+
+      @media #{$lg-up} {
+        display: block;
+      }
+      >img {
+        position: absolute;
+
+        +img {
+          top: 150px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
     .zoom-wrapper {
-      border: 1px solid rgba($tundora, .1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,14 +60,28 @@
             content: '';
             background-image: url(../images/products/best-seller.svg);
             background-repeat: no-repeat;
-            width: 81px;
-            height: 63px;
+            width: 180px;
+            height: 30px;
             display: block;
             position: absolute;
-            top: 30px;
-            left: 30px;
+            bottom: calc(0px + 30px);
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1;
+
+            @media #{$sm-up} {
+              bottom: calc(0px + 80px);
+            }
+
+            @media #{$lg-up} {
+              bottom: calc(0px + 30px);
+              width: 203px;
+            }
           }
+        }
+
+        .zoomImg {
+          z-index: 2;
         }
       }
 
@@ -165,14 +198,14 @@
         }
 
         +p {
-          color: $tundora;
+          color: $black;
           font-size: 1.4rem;
           line-height: 2rem;
         }
       }
 
       .product-price {
-        color: $tundora;
+        color: $black;
         font-size: 1.4rem;
         font-weight: 600;
         line-height: 2.4rem;
@@ -210,7 +243,7 @@
         }
 
         button,input {
-          background-color: $wild-sand;
+          background-color: #e6e6e6;
           border: 0;
           float: left;
 
@@ -248,6 +281,7 @@
         }
 
         a {
+          color: $disco;
           font-size: 1.3rem;
         }
       }
@@ -271,12 +305,13 @@
       }
 
       &:first-of-type {
-        margin-right: 1rem;
+        padding-right: 3rem;
         flex-basis: 100%;
         order: 2;
 
         @media #{$lg-up} {
-          flex-basis: 60%;
+          border-right: 1px solid #b3b3b3;
+          flex-basis: 70%;
           order: 1;
         }
       }
@@ -287,14 +322,14 @@
       align-items: center;
 
       h2 {
-        color: $tundora;
+        color: $black;
         font-size: 2.4rem;
         font-weight: 700;
         margin-right: 3rem;
       }
 
       .rating {
-        background-color: $wild-sand;
+        background-color: #e6e6e6;
         padding: .5rem 1.43rem;
         margin-right: .5rem;
       }
@@ -306,7 +341,7 @@
 
     .review {
       h4 {
-        color: $disco;
+        color: $black;
         font-size: 1.6rem;
         line-height: 2.6rem;
         margin-bottom: 1rem;
@@ -321,29 +356,57 @@
       display: flex;
       flex-direction: column;
       h2 {
-        color: $tundora;
+        color: $black;
         font-size: 2.4rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
       }
 
-      .box-grey {
+      .details {
         flex: 1;
+
+        h2 {
+          margin-left: 0;
+          @media #{$lg-up} {
+            margin-left: 10rem;
+          }
+        }
 
         table {
           width: 100%;
-          th {
-            color: $tundora;
-            font-size: 1.8rem;
-            font-weight: 700;
-            padding-bottom: .7rem;
-          }
+    
+          tr {
+            border: 0;
+            th {
+              color: $black;
+              font-size: 1.8rem;
+              font-weight: 700;
+              padding-bottom: .7rem;
+              text-align: left;
 
-          td {
-            font-size: 1.6rem;
-            border-bottom: 1px solid rgba($tundora, .1);
-            padding: .7rem 0 .3rem;
-            text-transform: uppercase;
+              &:first-of-type {
+                text-align: left;
+                @media #{$lg-up} {
+                  text-align: right;
+                }
+              }
+            }
+
+            td {
+              background-color: white;
+              border: none !important;
+              font-size: 1.6rem;
+              padding: .7rem 1rem .3rem;
+              text-transform: uppercase;
+              text-align: left;
+              &:first-of-type {
+                color: #666666;
+                text-align: left;
+                @media #{$lg-up} {
+                  text-align: right;
+                }
+              }
+            }
           }
         }
       }
@@ -351,7 +414,7 @@
   }
 
   .accordion {
-    background-color: $wild-sand;
+    background-color: #e6e6e6;
     display: none;
     position: absolute;
     top: 130px;
@@ -378,7 +441,7 @@
       h3 {
         button {
           background-color: transparent;
-          border-bottom: 1px solid $disco;
+          border-bottom: 1px solid #b3b3b3;
           font-size: 2rem;
           font-weight: 700;
           padding: 1rem 1.25rem;
@@ -390,7 +453,7 @@
           &:before,
           &:after {
             content: "";
-            background-color: $disco;
+            background-color: $black;
             width: 10px;
             height: 1px;
             position: absolute;
@@ -415,7 +478,7 @@
 
     .show {
       .card-body {
-        border-bottom: 1px solid $disco;
+        border-bottom: 1px solid #b3b3b3;
       }
     }
 
@@ -433,7 +496,7 @@
 
   .recommended {
     h2 {
-      color: $disco;
+      color: $black;
       font-size: 2.4rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
@@ -449,11 +512,12 @@
       display: flex;
     }
     .owl-item>div {
-      background-color: white;
+      background-color: #f4f4f4;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 10px;
       padding: 0 5rem;
       position: relative;
       text-align: center;
@@ -475,12 +539,13 @@
           content: '';
           background-image: url(../images/products/best-seller.svg);
           background-repeat: no-repeat;
-          width: 81px;
-          height: 63px;
+          width: 123px;
+          height: 19px;
           display: block;
           position: absolute;
-          top: 0;
-          left: 2px;
+          top: 225px;
+          left: 50%;
+          transform: translateX(-50%);
           z-index: 1;
         }
       }
